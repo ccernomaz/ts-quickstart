@@ -1,0 +1,24 @@
+{
+  "name": "ts-quickstart",
+  "version": "0.1.0",
+  "description": "A template of a TypeScript project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec \"clear && ts-node ./src/index.ts\"",
+    "start:windows": "nodemon --exec \"cls && ts-node ./src/index.ts\"",
+    "debug": "ts-node ./src/index.ts",
+    "production": "npm run build && clear && node build/index.js",
+    "production:windows": "npm run build && cls && node build/index.js",
+    "build": "rimraf ./build && tsc",
+    "clean": "rimraf ./build && rimraf ./node_modules"
+  },
+  "author": "Cristian Cernomaz",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "*",
+    "nodemon": "^2.0.19",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
